@@ -1,3 +1,7 @@
+ @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200&family=Hanken+Grotesk:wght@200&family=Lato:wght@300&family=Poppins:wght@200&display=swap');
+
+ @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +9,28 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(80, 235, 126);
 }
 
-h1 {
+.titulo {
+    font-family: 'PT Sans', sans-serif;
+    padding: 175px;
+    color: rgb(32, 35, 41);
+    border: none;
+    font-weight: 900;
+    z-index: 1;
+    font-size: 5.625rem;
+    justify-content: center;
     text-align: center;
 } 
 
 main {
+    margin: 35px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
 }
 
 .img {
@@ -28,6 +43,36 @@ img {
 
 article {
     background-color: rgb(27, 236, 191);
-    border-radius: 22px;
+    border-radius: 20px;
     padding: 25px;
+    box-shadow: 1px 1px 1px rgb(46, 44, 44);
+    transition: all .4s ease;
 }
+
+article:hover {
+    transform: translateY(-5px);
+    color: white;
+    background-color: rgb(57, 61, 85);
+}
+
+@media (max-width: 768px) {
+    main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    main {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+
+  .hero {
+    height: 500px;
+    background-color: rgb(27, 236, 191);
+  }
